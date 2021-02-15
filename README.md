@@ -1,6 +1,8 @@
 # Prueba Técnica
 
 ## Primer ejercicio
+ `myMatrix.py`
+
 Construya un objeto que reciba un arreglo o una matriz de dimensión N el cual contiene
 números de tipo entero.
 El objeto debe tener los siguientes métodos suponiendo la siguiente definición.
@@ -46,6 +48,8 @@ MyMatrix.new(f).compute -> 74
 
 ## Segundo ejercicio
 
+`aritmetica.py`
+
 Construya un objeto que reciba como parámetro un string y reconozca mediante expresiones
 regulares los siguientes criterios.
 El objeto debe tener los siguientes métodos suponiendo la siguiente definición.
@@ -76,6 +80,7 @@ MyArray.new(c).compute -> -14
 MyArray.new(d).compute -> false
 
 ## Tercer ejercicio 
+`peliqueria, modelo ER.png`
 
 Modele en diagrama entidad relación una base de datos para una peluquería, en la cual se
 manejarán datos de clientes(nombre, cédula, género, teléfono y correo electrónico), datos de

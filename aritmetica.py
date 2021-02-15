@@ -33,6 +33,11 @@ class MyArray():
         print(self._valid())
 
     def _valid(self):
+        """
+            (uno o más números seguido de un operador aritmetico) esto 0 o más veces
+            seguido de una operación de un (número operador numero) o ('(numero operador numero)'), esto una o más veces
+            seguido de una operación de un (número operador numero) o ('(numero operador numero)'), esto cero o más veces
+        """
         expr = '(([0-9]+)[\\+\\-\\*\\/]{1})*((([0-9]+)[\\+\\-\\*\\/]{1}[0-9]+)|\((([0-9]+)[\\+\\-\\*\\/]{1}[0-9]+)\))+([\\+\\-\\*\\/]{1}[0-9]+)*|\(([\\+\\-\\*\\/]{1}[0-9]+)*\)'
         valid = re.match(expr, self.entrada)
         
@@ -70,6 +75,9 @@ def entradas():
     g = "(2 + 10 / 2 - 20"
     h = "2 + 10 / 2 - 20"
     l = [a,b,c,d,e,f,g,h]
+    
+    # esta linea es básicamente para quitarle los espacios a las operaciones
+    # y que de esto '3 + 5 * (20 - 10)'  se pase a esto '3+5*(20-10)'
     l = [''.join(x.split()) for x in l]
     
     return l
@@ -94,7 +102,7 @@ def main():
 if '__main__' == __name__:
     main()
 
-    """ Llaamar la calse con el try/excepy y la funcione val """
+    """ Llamar la calse con el try/excepy y la funcione val """
     # l = entradas()
     # for i in l:
     #     print(i,end=' = ')
