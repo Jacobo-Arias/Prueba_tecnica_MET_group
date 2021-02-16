@@ -4,7 +4,7 @@ class MyMatrix():
         self.matrix = matrix
         
     def dimension(self):
-        print(self._dimension(self.matrix))
+        return self._dimension(self.matrix)
 
     def straight(self):
         longitudes = self._lists_long(self.matrix)
@@ -12,8 +12,7 @@ class MyMatrix():
         # si las longitudes en un inico es un entero es porque solo tiene
         # una dimension, al tener una se dice que todas sin iguales
         if type(longitudes) == int:
-            print(True)
-            return 
+            return True
         
         tipo = type(longitudes)
         uniform = True
@@ -22,11 +21,11 @@ class MyMatrix():
             uniform = uniform and self._compare_long(longitudes)
             longitudes = self._lists_long(longitudes)
             tipo = type(longitudes)
-        print(uniform)
+        return uniform
 
 
     def compute(self):
-        print(self._compute(self.matrix))
+        return(self._compute(self.matrix))
 
     # Accede a todos los numeros de manera recursiva
     # como si fuera un arbol y lo retorna a una suma
@@ -115,17 +114,17 @@ def main():
         if op == '1':
             for i in l:
                 print(i)
-                MyMatrix(i).dimension()
+                print(MyMatrix(i).dimension())
         
         elif op == '2':
             for i in l:
                 print(i)
-                MyMatrix(i).straight()
+                print(MyMatrix(i).straight())
         
         elif op == '3':
             for i in l:
                 print(i)
-                MyMatrix(i).compute()
+                print(MyMatrix(i).compute())
 
 if '__main__' == __name__:
     main()

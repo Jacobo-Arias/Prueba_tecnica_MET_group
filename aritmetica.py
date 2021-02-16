@@ -30,7 +30,7 @@ class MyArray():
         self.entrada = entrada
     
     def operation(self):
-        print(self._valid())
+        return self._valid()
 
     def _valid(self):
         """
@@ -52,11 +52,9 @@ class MyArray():
             # al final opté por evaluarlo igual ya que las in-built functions
             # que vienen con el lenguaje tienden as er mucho más rápidas
             # y óptimas que hacerlo manual
-            print(eval(self.entrada))
-            return
+            return eval(self.entrada)
         else:
-            print(valid)
-            return
+            return valid
 
 def menu():
     return input("""Que desea hacer?
@@ -92,12 +90,12 @@ def main():
         if op == '1':
             for i in l:
                 print(i, end=' = ')
-                MyArray(i).operation()
+                print(MyArray(i).operation())
         
         elif op == '2':
             for i in l:
                 print(i, end=' = ')
-                MyArray(i).compute()
+                print(MyArray(i).compute())
 
 if '__main__' == __name__:
     main()
